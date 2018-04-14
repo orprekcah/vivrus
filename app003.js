@@ -42648,6 +42648,9 @@ object-assign
                 this.playerBarn.update(e, this.activeId, this.particleBarn, this.camera, this.map, this.input, this.audioManager, this.ambientSounds, this.emoteManager.wheelKeyTriggered, this.gameOver),
                 this.camera.pos = m.copy(this.activePlayer.pos),
                 this.camera.applyShake();
+				
+				console.log('camera#zoom=' + this.camera.zoom);
+				
                 var t = this.activePlayer.getScopeZoom()
                   , i = h.min(this.camera.screenWidth, this.camera.screenHeight)
                   , a = h.max(this.camera.screenWidth, this.camera.screenHeight)
@@ -42661,8 +42664,6 @@ object-assign
                 (this.input.keyPressed(E.Key.M) || this.input.keyPressed(E.Key.G)) && this.uiManager.displayMapLarge(!1),
                 this.input.keyPressed(E.Key.Escape) && this.uiManager.toggleEscMenu(),
                 this.input.keyPressed(E.Key.V) && this.uiManager.cycleVisibilityMode();
-				
-				console.log('camera#zoom=' + camera.zoom);
 				
                 var u = this.activePlayer.pos
                   , c = this.camera.screenToPoint(this.input.mousePos)
