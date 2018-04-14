@@ -1,3 +1,4 @@
+var zoom = 10;
 webpackJsonp([0], {
     "+0OL": function(e, t, i) {
         "use strict";
@@ -4355,14 +4356,17 @@ webpackJsonp([0], {
 
 					if (key == 190 && zoom != 200) {
 						zoom += 1;
+						console.log('zoom: ' + zoom);
 					} else if (key == 188 && zoom != 0) {
 						zoom -= 1;
+						console.log('zoom: ' + zoom);
 					} else if (key == 192) {
 					 var a = {
 							debug: 1,
 							dev: !1
 						};
 						e.exports = a
+						console.log('debug/dev');
 					}
 					// document.getElementById('currentZoom').innerHTML = 'Zoom = '+zoom;
 				}
