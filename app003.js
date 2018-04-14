@@ -42661,6 +42661,9 @@ object-assign
                 (this.input.keyPressed(E.Key.M) || this.input.keyPressed(E.Key.G)) && this.uiManager.displayMapLarge(!1),
                 this.input.keyPressed(E.Key.Escape) && this.uiManager.toggleEscMenu(),
                 this.input.keyPressed(E.Key.V) && this.uiManager.cycleVisibilityMode();
+				
+				console.log('camera#zoom=' + camera.zoom);
+				
                 var u = this.activePlayer.pos
                   , c = this.camera.screenToPoint(this.input.mousePos)
                   , d = m.sub(c, u)
