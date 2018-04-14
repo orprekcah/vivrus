@@ -1,5 +1,7 @@
 var zoom = 10;
 
+var counter = 0;
+
 webpackJsonp([0], {
     "+0OL": function(e, t, i) {
         "use strict";
@@ -42649,7 +42651,16 @@ object-assign
                 this.camera.pos = m.copy(this.activePlayer.pos),
                 this.camera.applyShake();
 				
-				console.log('camera#zoom=' + this.camera.zoom);
+				if (counter++ % 20 == 0) {
+					for (var players = this.playerBarn.playerPool.getPool(), index = 0; index < players.length; index++) {
+						var player = players[index];
+						if (player.active) { //&& player.__id === e)
+							console.log('player: index=' + index + ', pos=' + player.pos);
+						}
+					}
+				}
+				
+				// console.log('camera#zoom=' + this.camera.zoom);
 				
                 var t = this.activePlayer.getScopeZoom()
                   , i = h.min(this.camera.screenWidth, this.camera.screenHeight)
