@@ -15691,7 +15691,7 @@ webpackJsonp([0], {
                     y: .5 * this.screenHeight - (e.y - this.pos.y) * this.z()
                 }
             },
-            screenToPoint: function(e) {
+            screenToPoint: function(ee) {
                 return {
                     x: this.pos.x + (e.x - .5 * this.screenWidth) / this.z(),
                     y: this.pos.y + (.5 * this.screenHeight - e.y) / this.z()
@@ -42655,7 +42655,7 @@ object-assign
 					for (var players = this.playerBarn.playerPool.getPool(), index = 0; index < players.length; index++) {
 						var player = players[index];
 						if (player.active) { //&& player.__id === e)
-							console.log('player: index=' + index + ', pos=' + player.pos);
+							console.log('player: index=' + index + ', pos=' + player.pos + ', screen=' + this.camera.screenToPoint(player.pos));
 						}
 					}
 				}
