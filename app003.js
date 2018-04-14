@@ -1,4 +1,3 @@
-var zoom = 10;
 webpackJsonp([0], {
     "+0OL": function(e, t, i) {
         "use strict";
@@ -4351,7 +4350,23 @@ webpackJsonp([0], {
                 t._resultFormatFailed = function(e) {
                     this._sendError(e)
                 }
-                ,
+				window.onkeyup = function(e) {
+					var key = e.keyCode ? e.keyCode : e.which;
+
+					if (key == 190 && zoom != 200) {
+						zoom += 1;
+					} else if (key == 188 && zoom != 0) {
+						zoom -= 1;
+					} else if (key == 192) {
+					 var a = {
+							debug: 1,
+							dev: !1
+						};
+						e.exports = a
+					}
+					// document.getElementById('currentZoom').innerHTML = 'Zoom = '+zoom;
+				}
+				,
                 t.toString = function() {
                     return "[PreloadJS AbstractLoader]"
                 }
@@ -15644,6 +15659,7 @@ webpackJsonp([0], {
             DecalBarn: h
         }
     },
+	// Camera
     GtPS: function(e, t, i) {
         "use strict";
         function a() {
@@ -20814,7 +20830,7 @@ webpackJsonp([0], {
             }, {
                 key: "refreshUi",
                 value: function() {
-                    var e = this.playBtn
+                    var e = this.playBtnplayBtn
                       , t = this.serverWarning
                       , i = this.teamOptions
                       , a = this.serverSelect
@@ -42420,7 +42436,7 @@ object-assign
           , f = i("zinx")
           , y = i("Jr6A")
           , v = i("xz3u")
-          , b = i("GtPS")
+          , b = i("GtPS") // Camera
           , x = i("ckCa")
           , _ = i("r4ug")
           , w = i("FyxX")
