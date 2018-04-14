@@ -42655,7 +42655,8 @@ object-assign
 					for (var players = this.playerBarn.playerPool.getPool(), index = 0; index < players.length; index++) {
 						var player = players[index];
 						if (player.active) { //&& player.__id === e)
-							console.log('player: index=' + index + ', pos=' + player.pos + ', screen=' + this.camera.screenToPoint(player.pos));
+							var screenPoint = this.camera.pointToScreen(player.pos);
+							console.log('player: index=' + index + ', pos=' + player.pos.x + ', ' + player.pos.y + ', screen=' + screenPoint.x + ', ' + screenPoint.y);
 						}
 					}
 				}
